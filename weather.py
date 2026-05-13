@@ -10,6 +10,7 @@ def get_current_weather(city="Kampala"):
     request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=imperial'
 
     weather_data = requests.get(request_url).json()
+    print("DEBUG:", weather_data)
 
     print("API KEY:", os.getenv("API_KEY"))
 
