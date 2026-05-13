@@ -16,9 +16,9 @@ def index():
 @app.route('/weather')
 def get_weather():
     city = request.args.get('city')
-
     # Check for empty strings or string with only spaces
-    if not bool(city.strip()):
+
+    if not city or not city.strip():
         city = "Kampala"
 
     weather_data = get_current_weather(city)
