@@ -11,6 +11,8 @@ def get_current_weather(city="Kampala"):
 
     weather_data = requests.get(request_url).json()
 
+    print("API KEY:", os.getenv("API_KEY"))
+
     return weather_data
 
 
